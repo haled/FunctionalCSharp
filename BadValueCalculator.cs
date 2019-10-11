@@ -16,7 +16,8 @@ namespace FunctionalCSharp
                 message = "Failure due to: " + e.Message;
             }
 
-            return "The result is " + result + " with a message of " + message;
+            return "The result is " + result +
+                " with a message of " + message;
         }
 
         public static IResult CalculateResult(int value)

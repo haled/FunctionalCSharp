@@ -41,6 +41,15 @@ namespace FunctionalCSharp
 
             return calculate(dimension);
         }
+
+        public Action<string> PrintMessage;
+
+        public static void MessagePrinter(string value)
+        {
+            Console.WriteLine(value);
+        }
+
+        PrintMessage = MessagePrinter;
     }
 
     public enum ShapeType
