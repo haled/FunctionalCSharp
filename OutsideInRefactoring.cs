@@ -6,16 +6,17 @@ namespace FunctionalCSharp
 {
     public class OutsideInRefactoring
     {
-        public decimal Divide(int divisor, int dividend)
+        public decimal CalcPayment(int amount, int length)
         {
-            decimal quotient = 0.0m;
+            decimal payment = 0.0m;
 
-            if (dividend != 0)
+            if (length != 0)
             {
-                quotient = (decimal)divisor / dividend;
+                var rawPayment = (decimal)amount / length;
+                payment = rawPayment + (rawPayment * 0.03m);
             }
 
-            return quotient;
+            return payment;
         }
 
         public bool IsZero(int value)
@@ -23,9 +24,14 @@ namespace FunctionalCSharp
             return value == 0;
         }
 
-        public decimal RefactoredDivide(int divisor, int dividend)
+        public decimal CalcPaymentRefactored(int amount, int length)
         {
-            return IsZero(dividend) ? 0.0m : divisor / dividend;
+            decimal payment = 0.0m;
+
+            var rawPayment = IsZero(length) ? 0.0m : (decimal)amount / length;
+            payment = rawPayment + (rawPayment * 0.03m);
+
+            return payment;
         }
     }
 }

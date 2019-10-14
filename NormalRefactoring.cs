@@ -6,33 +6,34 @@ namespace FunctionalCSharp
 {
     public class NormalRefactoring
     {
-        public decimal Divide(int divisor, int dividend)
+        public decimal CalcPayment(int amount, int length)
         {
-            decimal quotient = 0.0m;
+            decimal payment = 0.0m;
 
-            if(dividend != 0)
+            if(length != 0)
             {
-                quotient = (decimal) divisor / dividend;
+                var rawPayment = (decimal) amount / length;
+                payment = rawPayment + (rawPayment * 0.03m);
             }
 
-            return quotient;
+            return payment;
         }
 
-        public decimal DoDivision(int x, int y)
+        public decimal DeterminePayment(int amt, int len)
         {
-            return (decimal) x / y;
+            return (decimal) amt / len;
         }
 
-        public decimal RefactoredDivide(int divisor, int dividend)
+        public decimal CalcPaymentRefactored(int amount, int length)
         {
-            decimal quotient = 0.0m;
+            decimal payment = 0.0m;
 
-            if (dividend != 0)
+            if (length != 0)
             {
-                quotient = DoDivision(divisor, dividend);
+                payment = DeterminePayment(amount, length);
             }
 
-            return quotient;
+            return payment;
         }
     }
 }
