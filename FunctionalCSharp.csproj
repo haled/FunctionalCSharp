@@ -5,4 +5,13 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="ApiApp\**" />
+    <Compile Remove="CompositionExperiment\**" />
+    <EmbeddedResource Remove="ApiApp\**" />
+    <EmbeddedResource Remove="CompositionExperiment\**" />
+    <None Remove="ApiApp\**" />
+    <None Remove="CompositionExperiment\**" />
+  </ItemGroup>
+
 </Project>
