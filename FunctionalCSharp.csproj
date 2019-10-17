@@ -1,8 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,6 +12,14 @@
     <EmbeddedResource Remove="CompositionExperiment\**" />
     <None Remove="ApiApp\**" />
     <None Remove="CompositionExperiment\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="BadValueCalculator.cs" />
+    <Compile Remove="DollardHandler.cs" />
+    <Compile Remove="Program.cs" />
+    <Compile Remove="Result.cs" />
+    <Compile Remove="Startup.cs" />
   </ItemGroup>
 
 </Project>
