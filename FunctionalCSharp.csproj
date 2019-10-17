@@ -5,21 +5,4 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="ApiApp\**" />
-    <Compile Remove="CompositionExperiment\**" />
-    <EmbeddedResource Remove="ApiApp\**" />
-    <EmbeddedResource Remove="CompositionExperiment\**" />
-    <None Remove="ApiApp\**" />
-    <None Remove="CompositionExperiment\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Remove="BadValueCalculator.cs" />
-    <Compile Remove="DollardHandler.cs" />
-    <Compile Remove="Program.cs" />
-    <Compile Remove="Result.cs" />
-    <Compile Remove="Startup.cs" />
-  </ItemGroup>
-
 </Project>
