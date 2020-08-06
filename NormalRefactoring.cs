@@ -21,7 +21,8 @@ namespace FunctionalCSharp
 
         public decimal DeterminePayment(int amt, int len)
         {
-            return (decimal) amt / len;
+            var rawPayment = (decimal) amt / len;
+            return (rawPayment + (rawPayment * 0.03m));
         }
 
         public decimal CalcPaymentRefactored(int amount, int length)
